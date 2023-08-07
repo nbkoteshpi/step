@@ -1,0 +1,34 @@
+{
+  "name": "step",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkoteshpi/step.git"
+  },
+  "keywords": [
+    "steps",
+    "of",
+    "react"
+  ],
+  "author": "kotesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbkoteshpi/step/issues"
+  },
+  "homepage": "https://github.com/nbkoteshpi/step#readme",
+  "dependencies": {
+    "parcel": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
