@@ -1,12 +1,12 @@
-
-body, html {
-margin: 0;
-padding: 0;
-width: 100%;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-*{
+* {
     margin: 0 0;
     padding: 0 0;
     box-sizing: border-box;
@@ -18,42 +18,15 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     margin: 0 auto;
     background-color: #f4f4f4;
 }
-.res-card-container{
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-bottom: 100px;
-}
-.res-card img{
-    border-radius: 5px 5px 0 0;
-    max-width: 100%;
-}
-.res-card{
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    padding: 12px;
-    min-height: 150px;
-    max-width: 283px;
-}
-.res-card p{
-    color: #2f2f2f;
-    font-style: italic;
-}
-.res-card .stars{
-    color: rgb(0, 226, 0);
-}
-.res-card .time{ color: #929292;font-style: normal; text-align: right;}
+
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0px 4px 9px 0px #e2e2e2;
     background: white;
-    padding: 0 10px;
+    padding: 10px;
     border-radius: 4px;
 }
 
@@ -69,6 +42,48 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     align-items: center;
     justify-content: space-around;
     gap: 0 20px;
+}
+
+.res-card-container {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 100px;
+}
+
+.res-card img {
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.res-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 12px;
+    min-height: 150px;
+    max-width: 283px;
+    min-width: 200px;
+}
+
+.res-card p {
+    color: #2f2f2f;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+.res-card .stars {
+    color: rgb(0, 226, 0);
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.res-card .time {
+    color: #929292;
+    font-style: normal;
+    text-align: right;
 }
 
 /*# sourceMappingURL=/step.9ad09f98.css.map */

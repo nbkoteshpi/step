@@ -28907,23 +28907,88 @@ var Header = function Header() {
     rel: "noopener noreferrer"
   }, "Profile")))));
 };
+var resList = [{
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}, {
+  data: {
+    resName: 'Himachal',
+    cuisineName: ['cuisines1', '', 'noodles', 'cuisines3', 'cuisines4'],
+    rating: 4.3,
+    costForTwo: '50000'
+  }
+}, {
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines3'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}, {
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}];
 var ResCard = function ResCard(props) {
-  var resName = props.resName,
-    cuisineName = props.cuisineName,
-    deliveryTime = props.deliveryTime,
-    rating = props.rating;
+  var resData = props.resData;
+  var _resData$data = resData === null || resData === void 0 ? void 0 : resData.data,
+    resName = _resData$data.resName,
+    cuisineName = _resData$data.cuisineName,
+    rating = _resData$data.rating,
+    costForTwo = _resData$data.costForTwo;
+
+  // console.log(resData);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "res-card"
   }, /*#__PURE__*/_react.default.createElement("img", {
     height: "150px",
-    src: "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/07/08/846004-zomato-dna.jpg",
+    src: "https://tse4.mm.bing.net/th/id/OIP.4p1Osp9E-j5U1tyCG5odnAHaEK?pid=ImgDet&rs=1",
     alt: "banner"
-  }), /*#__PURE__*/_react.default.createElement("h3", null, resName), /*#__PURE__*/_react.default.createElement("p", null, cuisineName), /*#__PURE__*/_react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("h3", null, resName), /*#__PURE__*/_react.default.createElement("p", null, cuisineName.join(', ')), " ", /*#__PURE__*/_react.default.createElement("div", {
     className: "stars"
-  }, rating), /*#__PURE__*/_react.default.createElement("p", {
+  }, rating, " Stars"), /*#__PURE__*/_react.default.createElement("p", {
     className: "time"
-  }, deliveryTime)));
+  }, "$", costForTwo / 100, " For two"), " "));
 };
+var Body = function Body() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "res-card-container"
+  }, resList.map(function (restaurant) {
+    return /*#__PURE__*/_react.default.createElement(ResCard, {
+      resData: restaurant
+    });
+  }));
+};
+var AppLayout = function AppLayout() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "app-layout"
+  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement(Body, null));
+};
+var root = _client.default.createRoot(document.getElementById("root"));
+root.render( /*#__PURE__*/_react.default.createElement(AppLayout, null));
+
+// import React from 'react';
+// import  ReactDOM  from 'react-dom/client';
+
+// // const heading = React.createElement('h2', {id:'heading'}, "Hello step project"); // Using React
+// // const heading = <h2>Hello jsx content</h2> // Using JSX
+// const Heading = ()=> (
+// <h2>Hello jsx content</h2>
+// ); // Using JSX
+
+// // const heading = ()=> {return <h2>Hello jsx content</h2>} // Using JSX
+
+// console.log(Heading);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// root.render(<Heading />);
 
 // const ResCard = ({ resName, cuisineName, deliveryTime, rating }) => {
 //   return (
@@ -28961,54 +29026,6 @@ var ResCard = function ResCard(props) {
 //   );
 // };
 // { resName, cuisineName, deliveryTime, rating }
-var Body = function Body() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "res-card-container"
-  }, /*#__PURE__*/_react.default.createElement(ResCard, {
-    resName: "biryani",
-    cuisineName: "fast food",
-    rating: "3",
-    deliveryTime: "35min"
-  }), /*#__PURE__*/_react.default.createElement(ResCard, {
-    resName: "Dhum biryani",
-    cuisineName: "Thandori",
-    rating: "4",
-    deliveryTime: "40min"
-  }), /*#__PURE__*/_react.default.createElement(ResCard, {
-    resName: "Mutton",
-    cuisineName: "fast food",
-    rating: "5",
-    deliveryTime: "50min"
-  }), /*#__PURE__*/_react.default.createElement(ResCard, {
-    resName: "biryani",
-    cuisineName: "fast food",
-    rating: "4.5",
-    deliveryTime: "1hr"
-  }));
-};
-var AppLayout = function AppLayout() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "app-layout"
-  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement(Body, null));
-};
-var root = _client.default.createRoot(document.getElementById("root"));
-root.render( /*#__PURE__*/_react.default.createElement(AppLayout, null));
-
-// import React from 'react';
-// import  ReactDOM  from 'react-dom/client';
-
-// // const heading = React.createElement('h2', {id:'heading'}, "Hello step project"); // Using React
-// // const heading = <h2>Hello jsx content</h2> // Using JSX
-// const Heading = ()=> (
-// <h2>Hello jsx content</h2>
-// ); // Using JSX
-
-// // const heading = ()=> {return <h2>Hello jsx content</h2>} // Using JSX
-
-// console.log(Heading);
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// root.render(<Heading />);
 },{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -29034,7 +29051,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62782" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52817" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
