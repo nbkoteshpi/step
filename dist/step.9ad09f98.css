@@ -86,4 +86,20 @@ html {
     text-align: right;
 }
 
+.filter{
+    padding: 10px;
+    text-align: right;
+}
+.btn-primary{
+    padding: 10px 20px;
+    border: 0;
+    background-color: black;
+    color: #fff;
+    border-radius:3px;
+    font-size:14px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
 /*# sourceMappingURL=/step.9ad09f98.css.map */
