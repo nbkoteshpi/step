@@ -29010,8 +29010,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import { RES_LIST as allCardData } from "../utils/mockData";
 
 var Body = function Body() {
-  var _listOfAllRest;
-  var listOfAllRest = [{
+  var _allResCards;
+  var allResCards = [{
     data: {
       resName: 'KFC',
       cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
@@ -29033,20 +29033,20 @@ var Body = function Body() {
       costForTwo: '40000'
     }
   }];
-  console.log(listOfAllRest);
+  console.log(allResCards);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "filter"
   }, /*#__PURE__*/_react.default.createElement("button", {
     type: "button",
     onClick: function onClick() {
-      listOfAllRest = listOfAllRest.filter(function (temp) {
+      allResCards = allResCards.filter(function (temp) {
         temp.data.rating = 3;
       });
     },
     className: "btn btn-primary"
   }, "Filter")), /*#__PURE__*/_react.default.createElement("div", {
     className: "res-card-container"
-  }, (_listOfAllRest = listOfAllRest) === null || _listOfAllRest === void 0 ? void 0 : _listOfAllRest.map(function (cardData, index) {
+  }, (_allResCards = allResCards) === null || _allResCards === void 0 ? void 0 : _allResCards.map(function (cardData, index) {
     return /*#__PURE__*/_react.default.createElement(_ResCard.default, {
       resData: cardData,
       key: index + "restaurantNumber",

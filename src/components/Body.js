@@ -4,7 +4,7 @@ import ResCard from "./ResCard";
 
 const Body = () => {
  
-  let listOfAllRest = [
+  let allResCards = [
     {
       data:{
         resName:'KFC',
@@ -30,14 +30,14 @@ const Body = () => {
       }
     },
   ]
-  console.log(listOfAllRest);
+  console.log(allResCards);
   return (
     <>
       <div className="filter">
         <button
           type="button"
           onClick={() => {
-            listOfAllRest = listOfAllRest.filter((temp) => {
+            allResCards = allResCards.filter((temp) => {
               temp.data.rating = 3;
             });
             
@@ -48,7 +48,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-card-container">
-        {listOfAllRest?.map((cardData, index) => (
+        {allResCards?.map((cardData, index) => (
           <ResCard
             resData={cardData}
             key={index + "restaurantNumber"}
