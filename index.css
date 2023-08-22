@@ -89,6 +89,10 @@ html {
 .filter{
     padding: 10px;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 20px;
 }
 .btn-primary{
     padding: 10px 20px;
@@ -97,6 +101,55 @@ html {
     color: #fff;
     border-radius:3px;
     font-size:14px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.shimmer-card{
+    height: 300px;
+    width: 200px;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.btn-login{
+    padding: 10px 20px;
+    border: 0;
+    background-color: rgb(8, 5, 209);
+    color: #ffffff;
+    border-radius:3px;
+    font-size:14px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 90px;
+}
+.search-input{
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: none;
+    padding: 0 15px;
+}
+.search{
+display: flex;
+
+}
+.search-btn{
+    padding: 10px 20px;
+    border: 0;
+    background-color: rgb(104 104 104);
+    color: #ffffff;
+    border-radius: 3px;
+    font-size: 13px;
     box-shadow: none;
     outline: none;
     cursor: pointer;

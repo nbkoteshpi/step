@@ -1,8 +1,9 @@
 import React from 'react';
 import { RES_LIST } from '../utils/mockData';
+import { CDN_URL } from '../utils/constants';
 
   const ResCard = (props) => {
-    console.log(props);
+    // console.log(props); 
     const { resData,id,key } = props;
     const {resName, cuisineName, rating, costForTwo} = resData?.data;
     return (
@@ -10,7 +11,7 @@ import { RES_LIST } from '../utils/mockData';
         <div className="res-card" key={123} id={`${id}-kotiannaher`}>
           <img
             height="150px"
-            src="https://tse4.mm.bing.net/th/id/OIP.4p1Osp9E-j5U1tyCG5odnAHaEK?pid=ImgDet&rs=1"
+            src={CDN_URL}
             alt="banner"
           />
           <h3>{resName}</h3>
