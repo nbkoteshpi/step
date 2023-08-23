@@ -6,33 +6,38 @@ import Shimmer from "./shimmer";
 const Body = () => {
   // React state variable
   const [listOfAllRestaurants, setListOfAllRestaurants] = useState(resList);
-  const [searchText, setSearchText] = useState('');
-
-  useEffect(() => {
-    fetchData();
-    console.log("useEffect called");
-  }, []);
-
+  const [searchText, setSearchText] = useState([]);
+  const [filteredRestList, setFilteredRestList] = useState(resList)
   console.log("body rendered");
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.239907453306518&lng=86.98135815560819&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+  // useEffect(() => {
+  //   fetchData();
+  //   console.log("useEffect called");
+  // }, []);
 
-    // convert in to string - not working code
-    const json = await data.json();
-    console.log("json file text goes here....--", json);
-    setListOfAllRestaurants(json.cards[1].card.card);
-  };
+ 
 
-  // Added loader -  Conditional rendering
-  if (listOfAllRestaurants.length === 0) {
-    return <h3>Loading...</h3>;
-  }
+  // const fetchData = async () => {
+  //   const data = await fetch(
+  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.239907453306518&lng=86.98135815560819&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //   );
+
+  //   // convert in to string - not working code
+  //   const json = await data.json();
+  //   console.log("json file text goes here....--", json);
+  //   setListOfAllRestaurants(json.cards[1].card.card);
+  // };
+
+  // // Added loader -  Conditional rendering
+  // if (listOfAllRestaurants.length === 0) {
+  //   return <h3>Loading...</h3>;
+  // }
 
   return listOfAllRestaurants.length === 0 ? (
+    <>
+    <p>No Data loaded...</p>
     <Shimmer />
+    </>
   ) : (
     <>
       <div className="filter">
@@ -42,8 +47,19 @@ const Body = () => {
             className="search-input"
             placeholder="Search here..."
             value={searchText}
-          />{" "}
-          <button className="search-btn">Search</button>
+            onChange={(e)=>{setSearchText(e.target.value)}}
+          />
+          <button 
+          className="search-btn"
+          onClick={
+            ()=>{
+              const filteredRestList = listOfAllRestaurants.filter(
+                (result) => result.data.resName.toLowerCase().includes(searchText.toLowerCase())
+              )
+              setFilteredRestList(filteredRestList);
+            }
+          }
+          >Top Rated</button>
         </div>
         <button
           type="button"
@@ -63,7 +79,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-card-container">
-        {listOfAllRestaurants?.map((cardData, index) => (
+        {filteredRestList?.map((cardData, index) => (
           <ResCard
             resData={cardData}
             key={index + "restaurantNumber"}
