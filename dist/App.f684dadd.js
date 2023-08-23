@@ -28900,251 +28900,7 @@ var LOGO_URL = "https://cdn-thumbs.barewalls.com/abstract-initial-letter-f-and-n
 exports.LOGO_URL = LOGO_URL;
 var CDN_URL = "https://tse4.mm.bing.net/th/id/OIP.4p1Osp9E-j5U1tyCG5odnAHaEK?pid=ImgDet&rs=1";
 exports.CDN_URL = CDN_URL;
-},{}],"src/components/Header.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _constants = require("./../utils/constants");
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Header = function Header() {
-  // let btnName = 'Login';
-  var _useState = (0, _react.useState)('Logout'),
-    _useState2 = _slicedToArray(_useState, 2),
-    btnName = _useState2[0],
-    setBtnName = _useState2[1];
-  // it will re-render whole header component 
-
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "nav-container"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _constants.LOGO_URL,
-    alt: "logo",
-    height: "50px"
-  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Menu item"), /*#__PURE__*/_react.default.createElement("li", null, "Menu item"), /*#__PURE__*/_react.default.createElement("li", null, "Menu item"), /*#__PURE__*/_react.default.createElement("li", null, "Menu item"), /*#__PURE__*/_react.default.createElement("li", null, "Menu item"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn-login",
-    onClick: function onClick() {
-      btnName === 'logout' ? setBtnName("Login") : setBtnName("logout");
-      console.log('clicked - ', btnName);
-    }
-  }, btnName)))));
-};
-var _default = Header;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./../utils/constants":"src/utils/constants.js"}],"src/utils/mockData.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.RES_LIST = void 0;
-var RES_LIST = [{
-  data: {
-    resName: 'KFC',
-    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
-    rating: 3.5,
-    costForTwo: '40000'
-  }
-}, {
-  data: {
-    resName: 'Himachal',
-    cuisineName: ['cuisines1', '', 'noodles', 'cuisines3', 'cuisines4'],
-    rating: 4.3,
-    costForTwo: '50000'
-  }
-}, {
-  data: {
-    resName: 'KFC',
-    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines3'],
-    rating: 3.5,
-    costForTwo: '40000'
-  }
-}, {
-  data: {
-    resName: 'KFC',
-    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
-    rating: 3.5,
-    costForTwo: '40000'
-  }
-}];
-exports.RES_LIST = RES_LIST;
-},{}],"src/components/ResCard.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _mockData = require("../utils/mockData");
-var _constants = require("../utils/constants");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var ResCard = function ResCard(props) {
-  // console.log(props); 
-  var resData = props.resData,
-    id = props.id,
-    key = props.key;
-  var _resData$data = resData === null || resData === void 0 ? void 0 : resData.data,
-    resName = _resData$data.resName,
-    cuisineName = _resData$data.cuisineName,
-    rating = _resData$data.rating,
-    costForTwo = _resData$data.costForTwo;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "res-card",
-    key: 123,
-    id: "".concat(id, "-kotiannaher")
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    height: "150px",
-    src: _constants.CDN_URL,
-    alt: "banner"
-  }), /*#__PURE__*/_react.default.createElement("h3", null, resName), /*#__PURE__*/_react.default.createElement("p", null, cuisineName.join(', ')), " ", /*#__PURE__*/_react.default.createElement("div", {
-    className: "stars"
-  }, rating, " Stars"), /*#__PURE__*/_react.default.createElement("p", {
-    className: "time"
-  }, "$", costForTwo / 100, " For two"), " "));
-};
-var _default = ResCard;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../utils/mockData":"src/utils/mockData.js","../utils/constants":"src/utils/constants.js"}],"src/components/shimmer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var Shimmer = function Shimmer() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-card"
-  }, "Card"));
-};
-var _default = Shimmer;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/components/Body.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _ResCard = _interopRequireDefault(require("./ResCard"));
-var _mockData = require("../utils/mockData");
-var _shimmer = _interopRequireDefault(require("./shimmer"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Body = function Body() {
-  // React state variable
-  var _useState = (0, _react.useState)(_mockData.RES_LIST),
-    _useState2 = _slicedToArray(_useState, 2),
-    listOfAllRestaurants = _useState2[0],
-    setListOfAllRestaurants = _useState2[1];
-  var _useState3 = (0, _react.useState)([]),
-    _useState4 = _slicedToArray(_useState3, 2),
-    searchText = _useState4[0],
-    setSearchText = _useState4[1];
-  var _useState5 = (0, _react.useState)(_mockData.RES_LIST),
-    _useState6 = _slicedToArray(_useState5, 2),
-    filteredRestList = _useState6[0],
-    setFilteredRestList = _useState6[1];
-  console.log("body rendered");
-
-  // useEffect(() => {
-  //   fetchData();
-  //   console.log("useEffect called");
-  // }, []);
-
-  // const fetchData = async () => {
-  //   const data = await fetch(
-  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.239907453306518&lng=86.98135815560819&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-  //   );
-
-  //   // convert in to string - not working code
-  //   const json = await data.json();
-  //   console.log("json file text goes here....--", json);
-  //   setListOfAllRestaurants(json.cards[1].card.card);
-  // };
-
-  // // Added loader -  Conditional rendering
-  // if (listOfAllRestaurants.length === 0) {
-  //   return <h3>Loading...</h3>;
-  // }
-
-  return listOfAllRestaurants.length === 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, "No Data loaded..."), /*#__PURE__*/_react.default.createElement(_shimmer.default, null)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "filter"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "search"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "input",
-    className: "search-input",
-    placeholder: "Search here...",
-    value: searchText,
-    onChange: function onChange(e) {
-      setSearchText(e.target.value);
-    }
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    className: "search-btn",
-    onClick: function onClick() {
-      var filteredRestList = listOfAllRestaurants.filter(function (result) {
-        return result.data.resName.toLowerCase().includes(searchText.toLowerCase());
-      });
-      setFilteredRestList(filteredRestList);
-    }
-  }, "Top Rated")), /*#__PURE__*/_react.default.createElement("button", {
-    type: "button",
-    onClick: function onClick() {
-      var filteredList = listOfAllRestaurants.filter(function (res) {
-        return res.data.rating > 4;
-      });
-      setListOfAllRestaurants(filteredList);
-      // listOfAllRestaurants = listOfAllRestaurants.filter(
-      //   (res) => res.data.rating > 3
-      // );
-      // console.log('filtered', listOfAllRestaurants)
-    },
-
-    className: "btn btn-primary"
-  }, "Filter")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "res-card-container"
-  }, filteredRestList === null || filteredRestList === void 0 ? void 0 : filteredRestList.map(function (cardData, index) {
-    return /*#__PURE__*/_react.default.createElement(_ResCard.default, {
-      resData: cardData,
-      key: index + "restaurantNumber",
-      id: index + index * 2 + "bcd"
-    });
-  })));
-};
-var _default = Body;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./ResCard":"src/components/ResCard.js","../utils/mockData":"src/utils/mockData.js","./shimmer":"src/components/shimmer.js"}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
+},{}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
 var define;
 "use strict";
 
@@ -37033,7 +36789,259 @@ function usePrompt(_ref8) {
   }, [blocker, when]);
 }
 //#endregion
-},{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"src/components/About.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"src/components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _constants = require("./../utils/constants");
+var _reactRouterDom = require("react-router-dom");
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var Header = function Header() {
+  // let btnName = 'Login';
+  var _useState = (0, _react.useState)('Logout'),
+    _useState2 = _slicedToArray(_useState, 2),
+    btnName = _useState2[0],
+    setBtnName = _useState2[1];
+  // it will re-render whole header component 
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "nav-container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _constants.LOGO_URL,
+    alt: "logo",
+    height: "50px"
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    exact: true,
+    to: "/"
+  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/about"
+  }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/contact"
+  }, "Contact")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("button", {
+    className: "btn-login",
+    onClick: function onClick() {
+      btnName === 'logout' ? setBtnName("Login") : setBtnName("logout");
+      console.log('clicked - ', btnName);
+    }
+  }, btnName)))));
+};
+var _default = Header;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./../utils/constants":"src/utils/constants.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/utils/mockData.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RES_LIST = void 0;
+var RES_LIST = [{
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}, {
+  data: {
+    resName: 'Himachal',
+    cuisineName: ['cuisines1', '', 'noodles', 'cuisines3', 'cuisines4'],
+    rating: 4.3,
+    costForTwo: '50000'
+  }
+}, {
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines3'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}, {
+  data: {
+    resName: 'KFC',
+    cuisineName: ['palav', 'cuisines1', 'cuisines2', 'cuisines3', 'cuisines4'],
+    rating: 3.5,
+    costForTwo: '40000'
+  }
+}];
+exports.RES_LIST = RES_LIST;
+},{}],"src/components/ResCard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _mockData = require("../utils/mockData");
+var _constants = require("../utils/constants");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var ResCard = function ResCard(props) {
+  // console.log(props); 
+  var resData = props.resData,
+    id = props.id,
+    key = props.key;
+  var _resData$data = resData === null || resData === void 0 ? void 0 : resData.data,
+    resName = _resData$data.resName,
+    cuisineName = _resData$data.cuisineName,
+    rating = _resData$data.rating,
+    costForTwo = _resData$data.costForTwo;
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "res-card",
+    key: 123,
+    id: "".concat(id, "-kotiannaher")
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    height: "150px",
+    src: _constants.CDN_URL,
+    alt: "banner"
+  }), /*#__PURE__*/_react.default.createElement("h3", null, resName), /*#__PURE__*/_react.default.createElement("p", null, cuisineName.join(', ')), " ", /*#__PURE__*/_react.default.createElement("div", {
+    className: "stars"
+  }, rating, " Stars"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "time"
+  }, "$", costForTwo / 100, " For two"), " "));
+};
+var _default = ResCard;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../utils/mockData":"src/utils/mockData.js","../utils/constants":"src/utils/constants.js"}],"src/components/shimmer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Shimmer = function Shimmer() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-card"
+  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-card"
+  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-card"
+  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-card"
+  }, "Card"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-card"
+  }, "Card"));
+};
+var _default = Shimmer;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/components/Body.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _ResCard = _interopRequireDefault(require("./ResCard"));
+var _mockData = require("../utils/mockData");
+var _shimmer = _interopRequireDefault(require("./shimmer"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var Body = function Body() {
+  // React state variable
+  var _useState = (0, _react.useState)(_mockData.RES_LIST),
+    _useState2 = _slicedToArray(_useState, 2),
+    listOfAllRestaurants = _useState2[0],
+    setListOfAllRestaurants = _useState2[1];
+  var _useState3 = (0, _react.useState)([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    searchText = _useState4[0],
+    setSearchText = _useState4[1];
+  var _useState5 = (0, _react.useState)(_mockData.RES_LIST),
+    _useState6 = _slicedToArray(_useState5, 2),
+    filteredRestList = _useState6[0],
+    setFilteredRestList = _useState6[1];
+  console.log("body rendered");
+
+  // useEffect(() => {
+  //   fetchData();
+  //   console.log("useEffect called");
+  // }, []);
+
+  // const fetchData = async () => {
+  //   const data = await fetch(
+  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.239907453306518&lng=86.98135815560819&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //   );
+
+  //   // convert in to string - not working code
+  //   const json = await data.json();
+  //   console.log("json file text goes here....--", json);
+  //   setListOfAllRestaurants(json.cards[1].card.card);
+  // };
+
+  // // Added loader -  Conditional rendering
+  // if (listOfAllRestaurants.length === 0) {
+  //   return <h3>Loading...</h3>;
+  // }
+
+  return listOfAllRestaurants.length === 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, "No Data loaded..."), /*#__PURE__*/_react.default.createElement(_shimmer.default, null)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "filter"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "search"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "input",
+    className: "search-input",
+    placeholder: "Search here...",
+    value: searchText,
+    onChange: function onChange(e) {
+      setSearchText(e.target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    className: "search-btn",
+    onClick: function onClick() {
+      var filteredRestList = listOfAllRestaurants.filter(function (result) {
+        return result.data.resName.toLowerCase().includes(searchText.toLowerCase());
+      });
+      setFilteredRestList(filteredRestList);
+    }
+  }, "Top Rated")), /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    onClick: function onClick() {
+      var filteredList = listOfAllRestaurants.filter(function (res) {
+        return res.data.rating > 4;
+      });
+      setListOfAllRestaurants(filteredList);
+      // listOfAllRestaurants = listOfAllRestaurants.filter(
+      //   (res) => res.data.rating > 3
+      // );
+      // console.log('filtered', listOfAllRestaurants)
+    },
+
+    className: "btn btn-primary"
+  }, "Filter")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "res-card-container"
+  }, filteredRestList === null || filteredRestList === void 0 ? void 0 : filteredRestList.map(function (cardData, index) {
+    return /*#__PURE__*/_react.default.createElement(_ResCard.default, {
+      resData: cardData,
+      key: index + "restaurantNumber",
+      id: index + index * 2 + "bcd"
+    });
+  })));
+};
+var _default = Body;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./ResCard":"src/components/ResCard.js","../utils/mockData":"src/utils/mockData.js","./shimmer":"src/components/shimmer.js"}],"src/components/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37088,7 +37096,23 @@ var Error = function Error() {
 };
 var _default = Error;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components/RestaurantsMenu.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var RestaurantsMenu = function RestaurantsMenu() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "resMenu"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "Name of the Restaurant"), /*#__PURE__*/_react.default.createElement("p", null, "Menu:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Biryani"), /*#__PURE__*/_react.default.createElement("li", null, "Fast food"), /*#__PURE__*/_react.default.createElement("li", null, "Burger"))));
+};
+var _default = RestaurantsMenu;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -37099,6 +37123,7 @@ var _reactRouterDom = require("react-router-dom");
 var _About = _interopRequireDefault(require("./components/About"));
 var _Contact = _interopRequireDefault(require("./components/Contact"));
 var _Error = _interopRequireDefault(require("./components/Error"));
+var _RestaurantsMenu = _interopRequireDefault(require("./components/RestaurantsMenu"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var AppLayout = function AppLayout() {
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -37117,6 +37142,9 @@ var appRouter = (0, _reactRouterDom.createBrowserRouter)([{
   }, {
     path: '/Contact',
     element: /*#__PURE__*/_react.default.createElement(_Contact.default, null)
+  }, {
+    path: '/restaurants/:resid',
+    element: /*#__PURE__*/_react.default.createElement(_RestaurantsMenu.default, null)
   }],
   errorElement: /*#__PURE__*/_react.default.createElement(_Error.default, null)
 }]);
@@ -37178,7 +37206,7 @@ root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.RouterPro
 //   );
 // };
 // { resName, cuisineName, deliveryTime, rating }
-},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./components/Header":"src/components/Header.js","./components/Body":"src/components/Body.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./components/About":"src/components/About.js","./components/Contact":"src/components/Contact.js","./components/Error":"src/components/Error.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./components/Header":"src/components/Header.js","./components/Body":"src/components/Body.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./components/About":"src/components/About.js","./components/Contact":"src/components/Contact.js","./components/Error":"src/components/Error.js","./components/RestaurantsMenu":"src/components/RestaurantsMenu.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
