@@ -1,4 +1,10 @@
-body,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* body,
 html {
     margin: 0;
     padding: 0;
@@ -179,4 +185,4 @@ display: flex;
 
 .p-30{
     padding: 30px;
-}
+} */

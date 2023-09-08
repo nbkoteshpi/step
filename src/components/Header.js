@@ -8,7 +8,15 @@ const Header = () => {
   // it will re-render whole header component 
 
     return (
-      <div className="nav-container">
+    //   display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // border-bottom: 1px solid #ddd;
+    // box-shadow: 0px 4px 9px 0px #e2e2e2;
+    // background: white;
+    // padding: 10px;
+    // border-radius: 4px;
+      <div className="flex flex-center bg-pink-400">
         <img src={LOGO_URL} alt="logo" height="50px" />
         <div>
           <ul>

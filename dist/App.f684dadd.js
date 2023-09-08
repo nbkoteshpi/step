@@ -36815,26 +36815,37 @@ var Header = function Header() {
     setBtnName = _useState2[1];
   // it will re-render whole header component 
 
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "nav-container"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _constants.LOGO_URL,
-    alt: "logo",
-    height: "50px"
-  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    exact: true,
-    to: "/"
-  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/about"
-  }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/contact"
-  }, "Contact")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("button", {
-    className: "btn-login",
-    onClick: function onClick() {
-      btnName === 'logout' ? setBtnName("Login") : setBtnName("logout");
-      console.log('clicked - ', btnName);
-    }
-  }, btnName)))));
+  return (
+    /*#__PURE__*/
+    //   display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // border-bottom: 1px solid #ddd;
+    // box-shadow: 0px 4px 9px 0px #e2e2e2;
+    // background: white;
+    // padding: 10px;
+    // border-radius: 4px;
+    _react.default.createElement("div", {
+      className: "flex flex-center bg-pink-400"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: _constants.LOGO_URL,
+      alt: "logo",
+      height: "50px"
+    }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      exact: true,
+      to: "/"
+    }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/about"
+    }, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/contact"
+    }, "Contact")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("button", {
+      className: "btn-login",
+      onClick: function onClick() {
+        btnName === 'logout' ? setBtnName("Login") : setBtnName("logout");
+        console.log('clicked - ', btnName);
+      }
+    }, btnName)))))
+  );
 };
 var _default = Header;
 exports.default = _default;
@@ -46735,7 +46746,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65331" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50261" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
