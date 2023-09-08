@@ -37061,12 +37061,16 @@ var User = function User(props) {
   var name = props.name,
     location = props.location,
     contact = props.contact;
-  var _useState = (0, _react.useState)(0),
+  var _useState = (0, _react.useState)(44),
     _useState2 = _slicedToArray(_useState, 1),
     count = _useState2[0];
+  var _useState3 = (0, _react.useState)(33),
+    _useState4 = _slicedToArray(_useState3, 1),
+    count2 = _useState4[0];
+  console.log('Function - ', props);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "user-card"
-  }, /*#__PURE__*/_react.default.createElement("p", null, "Count:", /*#__PURE__*/_react.default.createElement("b", null, count)), /*#__PURE__*/_react.default.createElement("h3", null, "User name: ", name, " "), /*#__PURE__*/_react.default.createElement("p", null, "Location: ", location, " "), /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Functional:"), /*#__PURE__*/_react.default.createElement("p", null, "Count:", /*#__PURE__*/_react.default.createElement("b", null, count)), /*#__PURE__*/_react.default.createElement("p", null, "Count:", /*#__PURE__*/_react.default.createElement("b", null, count2)), /*#__PURE__*/_react.default.createElement("p", null, "User name: ", name, " "), /*#__PURE__*/_react.default.createElement("p", null, "Location: ", location, " "), /*#__PURE__*/_react.default.createElement("a", {
     href: "#"
   }, "Contact: ", contact, " ")));
 };
@@ -43003,9 +43007,9 @@ var UserClass = /*#__PURE__*/function (_React$Component) {
     var _this;
     _classCallCheck(this, UserClass);
     _this = _super.call(this, props);
-    console.log(props);
     _this.state = {
-      count: 0
+      count: 0,
+      count2: 2
     };
     return _this;
   }
@@ -43016,10 +43020,12 @@ var UserClass = /*#__PURE__*/function (_React$Component) {
         name = _this$props.name,
         location = _this$props.location,
         contact = _this$props.contact,
-        count = _this$props.count;
+        count = _this$props.count,
+        count2 = _this$props.count2;
+      console.log('Class - ', this.props);
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
         className: "user-card bg-red"
-      }, /*#__PURE__*/_react.default.createElement("p", null, "Count ", /*#__PURE__*/_react.default.createElement("b", null, count)), /*#__PURE__*/_react.default.createElement("h3", null, "User name: ", name, " "), /*#__PURE__*/_react.default.createElement("p", null, "Location: ", location, " "), /*#__PURE__*/_react.default.createElement("a", {
+      }, /*#__PURE__*/_react.default.createElement("h3", null, "Classic:"), /*#__PURE__*/_react.default.createElement("p", null, "Count: ", /*#__PURE__*/_react.default.createElement("b", null, count)), /*#__PURE__*/_react.default.createElement("p", null, "Count2: ", /*#__PURE__*/_react.default.createElement("b", null, count2)), /*#__PURE__*/_react.default.createElement("p", null, "User name: ", name, " "), /*#__PURE__*/_react.default.createElement("p", null, "Location: ", location, " "), /*#__PURE__*/_react.default.createElement("a", {
         href: "#"
       }, "Contact: ", contact, " ")));
     }
@@ -43047,11 +43053,15 @@ var About = function About() {
   }, /*#__PURE__*/_react.default.createElement(_User.default, {
     name: "NB Kotesh",
     location: "Hyderabad",
-    contact: "+91-8099183376"
+    contact: "+91-8099183376",
+    count: "12",
+    count2: "2222"
   }), /*#__PURE__*/_react.default.createElement(_UserClass.default, {
     name: "Abhishikth",
     location: "Hyderabad",
-    contact: "+91 8099183376"
+    contact: "+91 8099183376",
+    count: "1111",
+    count2: "1234"
   }))));
 };
 var _default = About;
@@ -46725,7 +46735,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51454" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65331" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
